@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>店員介紹 | 糖霜工坊</title>
+    <link rel="icon" href="img/logo.png" type="image/png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f1e1;
+        }
+
+        .card {
+            transition: transform 0.5s ease;
+            border: 1px solid #3c6e47;
+            border-radius: 10px;
+            height: 100%;
+        }
+
+        .cardgap {
+            margin-bottom: 8px;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-title {
+            color: #3c6e47;
+        }
+
+        .card-text,
+        .card-subtitle,
+        .section-subtitle {
+            color: #888888;
+            /* 較淺的灰色文字 */
+        }
+
+        .btn-custom {
+            background-color: #3c6e47;
+            border: none;
+            color: #ffffff;
+        }
+
+        .btn-custom:hover {
+            background-color: #5a8a6f;
+        }
+
+        .choose-section {
+            background-color: transparent;
+        }
+
+        .choose-section .card {
+            border: 1px solid #3c6e47;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .choose-section .card:hover {
+            transform: scale(1.05);
+            background-color: #f0f0f0;
+        }
+
+        .choose-section .card-body {
+            text-align: center;
+            flex-grow: 1;
+        }
+
+        .section-title {
+            font-size: 28px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 10px;
+        }
+
+        .section-subtitle {
+            font-size: 15px;
+            color: #888;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+
+        .section-title-cards {
+            font-size: 24px;
+            font-weight: bold;
+            color: #3c6e47;
+            margin-bottom: 20px;
+            text-align: center;
+            margin: 10px 0px;
+        }
+
+        .d-flex a i {
+            transition: transform 0.3s ease;
+        }
+
+        .d-flex a:hover i {
+            transform: scale(1.2);
+        }
+
+        .card-img-wrapper {
+            position: relative;
+        }
+
+        .card-img-wrapper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+
+        .card-img-wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            /* 保持圖片的比例，並填滿整個容器 */
+            border-radius: 10px;
+            transition: transform 0.5s ease;
+        }
+
+        .card-img-wrapper:hover img {
+            transform: scale(1.1);
+            /* 懸停時略微放大 */
+        }
+
+        .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(255, 255, 255, 0.6);
+            color: rgb(0, 0, 0);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: 10px;
+        }
+
+        .card-img-wrapper:hover .overlay {
+            opacity: 1;
+            /* 懸停時顯示 overlay */
+        }
+
+        .overlay p {
+            font-size: 18px;
+            font-weight: bold;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container" style="padding-top: 10px;">
+        <h2 class="section-title">糖霜工坊</h2>
+        <p class="section-subtitle">幸福從這裡開始，每一口都是甜蜜的滋味</p>
+    </div>
+
+    <!-- 自我介紹 -->
+    <section class="container py-4">
+        <div class="card shadow">
+            <div class="row align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="img/member1.jpg" class="rounded-circle my-3" alt="店員照片"
+                        style="width: 250px; height: 250px; object-fit: cover;">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h4 class="card-title fw-bold" style="color: #3c6e47;">吳映潔</h4>
+                        <p class="card-text text-muted">糖霜工坊 | 甜點師</p>
+                        <p>
+                            作為一名甜點師，我相信甜點不僅是美味的食物，更是傳遞幸福與歡樂的橋樑。
+                            我專注於設計創意蛋糕與甜點，希望每一位顧客都能感受到我們的用心。
+                        </p>
+                        <p>擅長製作：草莓蛋糕、抹茶戚風、創意甜點設計。</p>
+                        <a href="#contact" class="btn btn-custom mt-3">聯絡我</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 我的專業技能 & 作品集 -->
+    <section id="choose" class="choose-section py-3">
+        <div class="container">
+            <div class="row">
+                <!-- 專業技能 -->
+                <div id="skills" class="col-12 col-md-6 mb-4">
+                    <div class="card flex-fill">
+                        <div class="card-body">
+                            <h4 class="card-title text-center fw-bold">技能</h4>
+                            <div class="mb-3">
+                                <label class="form-label">草莓蛋糕</label>
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 70%; background-color: #3c6e47;" aria-valuenow="70"
+                                        aria-valuemin="0" aria-valuemax="100">70%</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">抹茶戚風蛋糕</label>
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 80%; background-color: #3c6e47;" aria-valuenow="80"
+                                        aria-valuemin="0" aria-valuemax="100">80%</div>
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label">創意甜點設計</label>
+                                <div class="progress" style="height: 20px;">
+                                    <div class="progress-bar" role="progressbar"
+                                        style="width: 90%; background-color: #3c6e47;" aria-valuenow="90"
+                                        aria-valuemin="0" aria-valuemax="100">90%</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 作品集 -->
+                <div id="portfolio" class="col-12 col-md-6 mb-4">
+                    <div class="card flex-fill">
+                        <div class="card-body">
+                            <h4 class="card-title text-center fw-bold">作品集</h4>
+                            <div class="row row-cols-1 row-cols-md-3 g-4 mt-4">
+                                <div class="col-6 col-md-4">
+                                    <div class="card">
+                                        <div class="card-img-wrapper">
+                                            <img src="img/strawberry.jpg" class="card-img-top" alt="草莓千層">
+                                            <div class="overlay">
+                                                <p>經典草莓蛋糕</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="card">
+                                        <div class="card-img-wrapper">
+                                            <img src="img/matcha_chiffon.jpg" class="card-img-top" alt="抹茶戚風">
+                                            <div class="overlay">
+                                                <p>抹茶戚風蛋糕</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-6 col-md-4">
+                                    <div class="card">
+                                        <div class="card-img-wrapper">
+                                            <img src="img/winter.jpg" class="card-img-top" alt="創意甜點">
+                                            <div class="overlay">
+                                                <p>創意甜點</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- 聯繫我 -->
+    <section class="container py-4" id="contact">
+        <div class="card shadow">
+            <div class="card-body text-center">
+                <h4 class="card-title fw-bold">聯絡我</h4>
+                <p>歡迎透過社群媒體聯繫我！</p>
+                <div class="d-flex justify-content-center mt-3">
+                    <a href="https://www.instagram.com/" class="me-3 text-decoration-none" target="_blank"
+                        style="color: #3c6e47;">
+                        <i class="fab fa-instagram fa-2x"></i>
+                    </a>
+                    <a href="https://www.facebook.com/" class="me-3 text-decoration-none" target="_blank"
+                        style="color: #3c6e47;">
+                        <i class="fab fa-facebook fa-2x"></i>
+                    </a>
+                    <a href="mailto:your-email@example.com" class="me-3 text-decoration-none" style="color: #3c6e47;">
+                        <i class="fas fa-envelope fa-2x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-4" style="background-color: #3c6e47;">
+        <p class="text-white mb-0">© 2024 糖霜工坊. 版權所有。</p>
+    </footer>
+
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

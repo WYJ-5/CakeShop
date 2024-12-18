@@ -1,0 +1,261 @@
+/* 基本樣式 */
+body,
+html {
+    margin: 0;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    color: #494444;
+}
+
+/* 導覽列樣式 */
+header nav {
+    padding: 20px 0;
+    background-color: #f8f8f8;
+}
+
+/* 導覽欄樣式 */
+html body header nav.navbar {
+    background-color: #ecdcc2 !important;
+}
+
+.navbar {
+    margin-bottom: 20px;
+}
+
+.navbar-brand img {
+    max-height: 80px;
+}
+
+.navbar-toggler-icon {
+    background-color: transparent;
+    /* 將背景色設為透明 */
+    border: none;
+    /* 確保不會有邊框 */
+    background-image: url("data:image/svg+xml;charset=UTF8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    /* 上面這段是 Bootstrap 預設的漢堡 icon，改 stroke='rgba(0, 0, 0, 0.5)' 可自定顏色 */
+}
+
+.navbar-nav .nav-link {
+    text-align: center;
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #be9a63;
+}
+
+.navbar-nav .nav-link .small-text {
+    font-size: 12px;
+    color: #666;
+}
+
+
+/* Logo */
+header .navbar-brand {
+    flex: 1;
+    /* 讓 Logo 保持在左側 */
+    text-align: left;
+}
+
+header img {
+    max-height: 80px;
+    width: auto;
+}
+
+/* 導航文字 */
+header .nav-link {
+    font-size: 18px;
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    padding: 10px;
+}
+
+header .nav-link .small-text {
+    font-size: 14px;
+    color: #666;
+    display: block;
+    margin-top: 5px;
+}
+
+
+
+/* 大螢幕下的平均分布 */
+@media (min-width: 992px) {
+    .navbar-nav {
+        flex: 1;
+        /* 平分導覽列 */
+        justify-content: space-evenly;
+    }
+}
+
+/* 小螢幕適配 */
+@media (max-width: 991px) {
+    header .navbar-nav {
+        flex: unset;
+    }
+}
+
+
+/* 聯絡我們 */
+.section h2 {
+    text-align: center;
+}
+
+.footer-section {
+    padding: 30px 20px;
+    text-align: center;
+    background-color: #ecdcc2;
+}
+
+.section p {
+    max-width: 600px;
+    margin: 0 auto;
+    color: #6b6b6b;
+}
+
+
+
+
+/* 去除下拉箭頭 */
+.nav-item.dropdown .dropdown-toggle::after {
+    content: none;
+    /* 移除下拉箭頭圖標 */
+}
+
+/* 下拉選單樣式 */
+.dropdown-menu {
+    text-align: left;
+}
+
+.dropdown-item {
+    padding: 10px 20px;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #be9a63;
+    ;
+}
+
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.section-subtitle {
+    font-size: 15px;
+    color: #888;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.section-title-cards {
+    font-size: 24px;
+    font-weight: bold;
+    color: #b79574;
+    margin-bottom: 20px;
+    text-align: center;
+    margin: 20px 0px;
+}
+
+/* 商品資訊區塊 */
+
+.cardgap {
+    margin-bottom: 10px;
+}
+
+.card {
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card-title {
+    margin-top: 15px;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+
+.fixed-height-block {
+    height: 150px;
+    object-fit: contain;
+}
+
+.popup {
+    display: none;
+    /* 預設隱藏 */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* 半透明背景 */
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-content {
+    position: relative;
+    background: #fff;
+    padding: 20px;
+    max-width: 500px;
+    width: 90%;
+    border-radius: 10px;
+    /* 邊框圓角 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* 陰影 */
+    text-align: center;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+.popup-content h2 {
+    margin-top: 0;
+}
+
+
+/* 彈出框圖片 */
+.popup-image {
+    max-width: 80%;
+    /* 縮小到容器寬度的 80% */
+    height: auto;
+    border-radius: 10px;
+    /* 圓角圖片 */
+    margin-bottom: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    /* 添加輕微陰影，讓圖片更突出 */
+}
+
+
+/* 彈出框標題 */
+.popup-title {
+    font-size: 24px;
+    color: #444;
+    margin-bottom: 10px;
+}
+
+/* 彈出框文字 */
+.popup-text {
+    font-size: 16px;
+    color: #666;
+    margin-bottom: 5px;
+}
